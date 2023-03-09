@@ -58,4 +58,4 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: GWL-145 MSIX build 3
-          path: 'GWSL_145 MSIX build 3.tar.gz'
+          path: 'GWSL_145 MSIX build 3.zip'

@@ -38,6 +38,7 @@ jobs:
           pip install infi.systray
           pip install keyboard
           pip install pyinstaller==3.5
+          pip install shutil
       - name: Building GWSL_service...
         run: |
           echo "pyinstaller"
@@ -52,7 +53,7 @@ jobs:
         run: |
           echo "pyinstaller"
       - name: Pack Application
-        run: tar.exe -zcvf 'GWSL_145 MSIX build 3.tar.gz' 'dist/GWSL_145 MSIX build 3'
+        run: python -c "__import__('shutil').make_archive('GWSL_GWSL_145 MSIX build 3.zip', 'zip', 'dist/GWSL_145 MSIX build 3')"
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:

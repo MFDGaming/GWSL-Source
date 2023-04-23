@@ -51,7 +51,5 @@ jobs:
       - name: Copying Assets...
         run: |
           echo "pyinstaller"
-      - name: Pack Application
-        run: python -c "__import__('shutil').make_archive('${{github.workspace}}/GWSL_GWSL_145 MSIX build 3.zip', 'zip', '${{github.workspace}}/dist/GWSL_145 MSIX build 3')"
       - name: Upload
         run: git add ${{github.workspace}} && git commit -m "Uploaded build" && git push

@@ -53,8 +53,5 @@ jobs:
           echo "pyinstaller"
       - name: Pack Application
         run: python -c "__import__('shutil').make_archive('${{github.workspace}}/GWSL_GWSL_145 MSIX build 3.zip', 'zip', '${{github.workspace}}/dist/GWSL_145 MSIX build 3')"
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: GWSL-145 MSIX build 3
-          path: '${{github.workspace}}/GWSL_145 MSIX build 3.zip'
+      - name: Upload
+        run: git add ${{github.workspace}} && git commit -m "Uploaded build" && git push
